@@ -1,0 +1,25 @@
+html {
+    background-color: #eee;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+h1{
+    font-size: xx-large;
+    outline: solid red;
+}
+
+p {
+    margin: 1em;
+    outline: solid red;
+}
+header, section {
+    background-color: #ccc;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 1em;
+    outline: solid red;
+}
