@@ -12,8 +12,6 @@ h1 {
     margin: .25em;
     margin-bottom: .5em;
     text-shadow: inset 1em black;
-    /* line-height: 2em; */
-    /* outline: solid red; */
 }
 h2 {
     font-size: 1.25em;
@@ -27,7 +25,6 @@ body {
 
 p {
     margin: 1em;
-    /* outline: solid red; */
 }
 header, section {
     background-color: #444;
@@ -36,7 +33,6 @@ header, section {
     border-radius: 1em;
     text-align: center;
     box-shadow: inset 0 1px 0 #aaa, 0 .5em 1em #111;
-    /* outline: solid red; */
 }
 .scoreboard, .input-pane, .rules {
     background-color: #333;
@@ -56,11 +52,14 @@ button, input {
     border-radius: .5em;
     box-shadow: inset 0 -1px 0 #888;
 }
-#todo-text {
-    color: #888;
-}
 #results {
     font-size: large;
+}
+#timer {
+    font-size: 2em;
+}
+#timer, #results {
+    font-family: monospace;
 }
 
 button {
