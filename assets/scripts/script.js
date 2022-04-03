@@ -5,12 +5,15 @@ var losses = document.querySelector("#losses");
 var timer = document.querySelector("#timer");
 
 var userInput = document.querySelector("#text-input");
+var userForm = document.querySelector("#input-form");
 var startButton = document.querySelector("#start");
 
 var countdown = 11;
+var textInputStore = "";
+var inputArray = [];
 
 // Timer function
-startButton.addEventListener("click", function(event) {
+function startTimer(event) {
     // prevents page refreshing and bubbling
     event.preventDefault();
     // startButton HIDE BUTTON ON PRESS
@@ -20,6 +23,7 @@ startButton.addEventListener("click", function(event) {
     var counter = setInterval(function() {
         // Subtract 1 from timer, then change the current timer
         countdown--;
+
         console.log("Countdown: " + countdown);
         timer.textContent = countdown;
         // if countdown hits 0, stop timer from continueing to subtract past 0
@@ -32,4 +36,20 @@ startButton.addEventListener("click", function(event) {
             countdown = 11;
         }
     }, 1000);
-});
+}
+
+// console.log(userInput.value.trim());
+
+function checkInput(event) {
+    // cleanup input
+    event.preventDefault();
+    var input = userInput.value.trim();
+    inputArray.push(input);
+    // console.log("Successfully Submitted: " + userInput.textContent);
+    console.log("Successfully Submitted: " + input); // Works!
+    localStorage.setItem("guess", JSON.stringify(inputArray));
+    userInput.value = ""; // Sets HTML input value back to nothing
+}
+
+startButton.onclick = startTimer;
+userForm.addEventListener("submit", checkInput);

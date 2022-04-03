@@ -63,17 +63,22 @@ button, input {
 }
 
 button {
-    background-color: #555;
+    /* #666 */
+    background-color: #666; 
     box-shadow: inset 0 1px 0 #ccc, 0 .25em .5em #111;
 }
 button:hover {
-    background-color: #777;
+    /* #777 */
+    background-color: #b73636;
     color: white;
-    box-shadow: inset 0 1px 0 white, 0 .25em .5em #111;
+    /* outline: solid 1px white;
+    outline-offset: 2px; */
+    box-shadow: inset 0 1px 0 white, 0 .25em .5em #111; /* inset 0 1px 0 white, */
 }
 button:focus {
-    background-color: #333;
-    box-shadow: inset 0 -1px 0 #888;
+    /* #333 */
+    background-color: #4e0c0c;
+    box-shadow: inset 0 -1px 0 #888, inset 0 .25em .5em black;
     color: #888;
 }
 
