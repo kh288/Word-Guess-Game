@@ -9,18 +9,34 @@
     <title>Word Guess Game</title>
 </head>
 <body>
-
     <header>
         <h1>Word Guessing Game!</h1>
+        <h2>Scores</h2>
         <div class="scoreboard">
-            <p id="wins">Wins: </p>
-            <p id="losses">Losses: </p>
+            <p id="wins">Wins: 0</p>
+            <p id="losses">Losses: 0</p>
         </div>
     </header>
 
     <section>
-        <p id="results">Results go here</p>
-    </section>    
+        <form id="form" method="POST">
+            <button id="start">Start!</button>
+            <input type="text"placeholder="Enter a word" name="todo-text" id="text-input" >
+            <h2 id="timer">10</h2>
+        </form>
+        <div class="input-pane">
+            <p id="results">_ _ _ _ _</p>
+        </div>
+    </section>
+
+    <!-- <section>
+        <h2>Rules</h2>
+        <div class="rules">
+            <p>The rules of the game are simple!</p>
+            <p>Simply type words until the letters match!</p>
+        </div>
+    </section> -->
+    
 </body>
 <script src="assets/scripts/script.js"></script>
 </html>
