@@ -56,6 +56,11 @@ button, input {
     border-radius: .5em;
     box-shadow: inset 0 -1px 0 #888;
 }
+.scoreboard {
+    display: inline-flex;
+    color: #ccc;
+}
+
 /* RE-ENABLE ONCE FINISHED WITH INPUT TESTING */
 input {
     display: none;
