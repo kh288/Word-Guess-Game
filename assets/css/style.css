@@ -61,7 +61,8 @@ button, input {
     display: none;
 } */
 #results {
-    font-size: large;
+    font-size: 16pt;
+    line-height: 0;
 }
 #timer {
     font-size: 2em;

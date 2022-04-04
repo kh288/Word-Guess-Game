@@ -12,8 +12,16 @@ var countdown = 11;
 var textInputStore = "";
 var inputArray = [];
 var hiddenWord =[];
-var guessLibrary = ["this", "forehead"];
 
+var guessLibrary = 
+["jumping",
+"singer",
+"foreign",
+"height",
+"chunky"];
+
+// randomly chooses the current word
+var currentWord = guessLibrary[Math.floor(Math.random() * guessLibrary.length - 1)];
 
 // Timer function
 function startTimer(event) {
@@ -44,16 +52,16 @@ function startTimer(event) {
 }
 
 function drawResult(stringInput) {
-    // Makes this variable the current word
-    var currentWord = guessLibrary[0];
+    // take that random word and put it into browser local storage
     localStorage.setItem("Current Word", currentWord);
 
+    // Iterates through the hidden word.
     for (x = 0; x < currentWord.length; x++) {
         console.log("Checking for: " + currentWord[x] + " in the " + x + " slot");
         for (y = 0; y < stringInput.length; y++) {
             if (stringInput[y] === currentWord[x]) {
                 console.log("Match!");
-                hiddenWord[x] = stringInput[y];
+                hiddenWord[x] = stringInput[y].toUpperCase();
             }
         }
     }
@@ -70,8 +78,9 @@ function drawResult(stringInput) {
 function drawHiddenWord() {
     // Should only be ran per "run"
     // Variable to represent the currently selected word but in _ _ _ format
+
     for (k = 0; k < guessLibrary[0].length; k++) {
-        hiddenWord.push("_"); 
+        hiddenWord.push("_");
     }
     // join removes the space and stores it into a string from an array
     var wordResult = hiddenWord.join(" ");
@@ -82,9 +91,10 @@ function drawHiddenWord() {
 function checkInput(event) {
     event.preventDefault();
     // cleanup input
-    var input = userInput.value.trim(); // is a string
+    var input = userInput.value.trim(); // is a clean string word
     // takes cleaned up input var and pushes it into input array (stores all guesses)
     inputArray.push(input);
+
     // Sets input value to a cleaned up variable to store in the browser with "setItem"
     localStorage.setItem("guess", JSON.stringify(inputArray));
     // console.log(guessLibrary[0].includes(input));
@@ -101,7 +111,10 @@ function checkInput(event) {
     userInput.value = "";
 }
 
-startButton.onclick = startTimer;
-userForm.addEventListener("submit", checkInput);
-drawHiddenWord();
-// drawResult();
+function playGame() {
+    startButton.onclick = startTimer;
+    userForm.addEventListener("submit", checkInput);
+    drawHiddenWord();
+}
+
+playGame();
