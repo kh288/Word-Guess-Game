@@ -57,9 +57,9 @@ button, input {
     box-shadow: inset 0 -1px 0 #888;
 }
 /* RE-ENABLE ONCE FINISHED WITH INPUT TESTING */
-/* input {
+input {
     display: none;
-} */
+}
 #results {
     font-size: 16pt;
     line-height: 0;
