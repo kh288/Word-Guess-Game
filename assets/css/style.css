@@ -1,3 +1,7 @@
+:root {
+    transition: all .5s ease-in-out;
+}
+
 html {
     background-color: #222;
     color: #ccc;
@@ -52,6 +56,10 @@ button, input {
     border-radius: .5em;
     box-shadow: inset 0 -1px 0 #888;
 }
+/* RE-ENABLE ONCE FINISHED WITH INPUT TESTING */
+/* input {
+    display: none;
+} */
 #results {
     font-size: large;
 }
@@ -68,16 +76,16 @@ button {
     box-shadow: inset 0 1px 0 #ccc, 0 .25em .5em #111;
 }
 button:hover {
-    /* #777 */
-    background-color: #b73636;
+    /* #777, #b73636 */
+    background-color: #777;
     color: white;
     /* outline: solid 1px white;
     outline-offset: 2px; */
     box-shadow: inset 0 1px 0 white, 0 .25em .5em #111; /* inset 0 1px 0 white, */
 }
 button:focus {
-    /* #333 */
-    background-color: #4e0c0c;
+    /* #333, #4e0c0c */
+    background-color: #333;
     box-shadow: inset 0 -1px 0 #888, inset 0 .25em .5em black;
     color: #888;
 }
